@@ -15,9 +15,9 @@ module.exports = {
 
         // GraphQLquery: defaults to a search query
         graphQLQuery: `
-          query {
-            user(login: 'GitHub-Laziji') {
-              gists(last: 12) {
+          query ($author: String = "", $last: Int = 0) {
+            user(login: $author) {
+              gists(last: $last) {
                 nodes {
                   id
                   description
@@ -29,7 +29,7 @@ module.exports = {
                   }
                 }
               }
-              followers(last: 12) {
+              followers(last: $last) {
                 totalCount
                 edges {
                   cursor
@@ -42,7 +42,7 @@ module.exports = {
                   }
                 }
               }
-              repositories(last: 12) {
+              repositories(last: $last) {
                 nodes {
                   name
                   url
@@ -53,7 +53,7 @@ module.exports = {
                   watchers {
                     totalCount
                   }
-                  languages(last: 10) {
+                  languages(last: $last) {
                     nodes {
                       name
                       id
@@ -70,8 +70,10 @@ module.exports = {
           }          
         `,
         // variables: defaults to variables needed for a search query
-        // variables: {
-        // }
+        variables: {
+          author: 'GitHub-Laziji',
+          last: 9
+        }
       }
     }
   ]
