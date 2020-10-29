@@ -1,0 +1,16 @@
+{
+  "name": "gridsome-blog",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "element-ui": "^2.13.2",
+    "gridsome": "^0.7.0",
+    "gridsome-source-github-api": "^0.1.4",
+    "gridsome-source-graphql": "^1.0.2",
+    "markdown-it": "^12.0.2"
+  }
+}
