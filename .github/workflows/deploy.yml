@@ -20,8 +20,8 @@ jobs:
           echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.name "设置用户名"
-          git config --global user.email "设置邮箱"
+          git config --global user.name "mick-sun"
+          git config --global user.email "mick.sunwei@qq.com"
       - name: Install dependencies
         run: |
           npm i
