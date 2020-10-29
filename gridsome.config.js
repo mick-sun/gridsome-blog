@@ -17,7 +17,7 @@ module.exports = {
         graphQLQuery: `
           query ($author: String = "", $last: Int = 10) {
             user(login: $author) {
-              gists(last: 10) {
+              gists(last: $last) {
                 nodes {
                   id
                   description
@@ -42,7 +42,7 @@ module.exports = {
                   }
                 }
               }
-              repositories(last: 10) {
+              repositories(last: $last) {
                 nodes {
                   name
                   url
@@ -71,8 +71,8 @@ module.exports = {
         `,
         // variables: defaults to variables needed for a search query
         variables: {
-          'author': 'GitHub-Laziji',
-          'last': 12
+          author: 'GitHub-Laziji',
+          last: 12
         }
       }
     }

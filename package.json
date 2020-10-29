@@ -12,5 +12,8 @@
     "gridsome-source-github-api": "^0.1.4",
     "gridsome-source-graphql": "^1.0.2",
     "markdown-it": "^12.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }

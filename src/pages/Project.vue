@@ -68,6 +68,7 @@ query {
             description
             stargazerCount
             forkCount
+            updatedAt
             watchers {
               totalCount
             }
